@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //开启网络状况的监听
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    self.hostReach = [Reachability reachabilityWithHostName:@"www.baidu.com"] ;
+    
+    //开始监听，会启动一个run loop
+    [self.hostReach startNotifier];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    
     return YES;
 }
 
@@ -47,5 +60,50 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)reachabilityChanged:(NSNotification *)note
+
+{
+    Reachability *currReach = [note object];
+    
+    NSParameterAssert([currReach isKindOfClass:[Reachability class]]);
+    
+    //对连接改变做出响应处理动作
+    
+    NetworkStatus status = [currReach currentReachabilityStatus];
+    
+    //如果没有连接到网络就弹出提醒实况
+    
+    self.isReachable = YES;
+    
+    if(status == NotReachable){
+        self.isReachable = NO;
+        return;
+        
+    }
+    if (status==ReachableViaWiFi||status==ReachableViaWWAN) {
+        self.isReachable = YES;
+        return;
+    }
+    
+}
+
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

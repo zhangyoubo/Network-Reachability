@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC459E6E1EB328FD00336D2B /* UIAlertController+ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = CC459E6B1EB328FD00336D2B /* UIAlertController+ActionSheet.m */; };
+		CC459E6F1EB328FD00336D2B /* UIAlertController+AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC459E6D1EB328FD00336D2B /* UIAlertController+AlertView.m */; };
 		CC4A7F251EB3211400C1DF7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A7F241EB3211400C1DF7A /* main.m */; };
 		CC4A7F281EB3211400C1DF7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A7F271EB3211400C1DF7A /* AppDelegate.m */; };
 		CC4A7F2B1EB3211400C1DF7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A7F2A1EB3211400C1DF7A /* ViewController.m */; };
 		CC4A7F2E1EB3211400C1DF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4A7F2C1EB3211400C1DF7A /* Main.storyboard */; };
 		CC4A7F301EB3211400C1DF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4A7F2F1EB3211400C1DF7A /* Assets.xcassets */; };
 		CC4A7F331EB3211400C1DF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4A7F311EB3211400C1DF7A /* LaunchScreen.storyboard */; };
+		CC4A7F491EB3217F00C1DF7A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4A7F481EB3217F00C1DF7A /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC459E6A1EB328FD00336D2B /* UIAlertController+ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ActionSheet.h"; sourceTree = "<group>"; };
+		CC459E6B1EB328FD00336D2B /* UIAlertController+ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ActionSheet.m"; sourceTree = "<group>"; };
+		CC459E6C1EB328FD00336D2B /* UIAlertController+AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+AlertView.h"; sourceTree = "<group>"; };
+		CC459E6D1EB328FD00336D2B /* UIAlertController+AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+AlertView.m"; sourceTree = "<group>"; };
 		CC4A7F201EB3211400C1DF7A /* LYReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4A7F241EB3211400C1DF7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC4A7F261EB3211400C1DF7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +33,8 @@
 		CC4A7F2F1EB3211400C1DF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC4A7F321EB3211400C1DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC4A7F341EB3211400C1DF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4A7F471EB3217F00C1DF7A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CC4A7F481EB3217F00C1DF7A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC459E691EB328FD00336D2B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CC459E6A1EB328FD00336D2B /* UIAlertController+ActionSheet.h */,
+				CC459E6B1EB328FD00336D2B /* UIAlertController+ActionSheet.m */,
+				CC459E6C1EB328FD00336D2B /* UIAlertController+AlertView.h */,
+				CC459E6D1EB328FD00336D2B /* UIAlertController+AlertView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		CC4A7F171EB3211400C1DF7A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +78,8 @@
 		CC4A7F221EB3211400C1DF7A /* LYReachability */ = {
 			isa = PBXGroup;
 			children = (
+				CC459E691EB328FD00336D2B /* Category */,
+				CC4A7F461EB3217F00C1DF7A /* Reachability */,
 				CC4A7F261EB3211400C1DF7A /* AppDelegate.h */,
 				CC4A7F271EB3211400C1DF7A /* AppDelegate.m */,
 				CC4A7F291EB3211400C1DF7A /* ViewController.h */,
@@ -77,6 +99,15 @@
 				CC4A7F241EB3211400C1DF7A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC4A7F461EB3217F00C1DF7A /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A7F471EB3217F00C1DF7A /* Reachability.h */,
+				CC4A7F481EB3217F00C1DF7A /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC459E6E1EB328FD00336D2B /* UIAlertController+ActionSheet.m in Sources */,
 				CC4A7F2B1EB3211400C1DF7A /* ViewController.m in Sources */,
 				CC4A7F281EB3211400C1DF7A /* AppDelegate.m in Sources */,
+				CC4A7F491EB3217F00C1DF7A /* Reachability.m in Sources */,
+				CC459E6F1EB328FD00336D2B /* UIAlertController+AlertView.m in Sources */,
 				CC4A7F251EB3211400C1DF7A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -260,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -273,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4GB3PHABNJ;
 				INFOPLIST_FILE = LYReachability/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LianYun.LYReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4GB3PHABNJ;
 				INFOPLIST_FILE = LYReachability/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LianYun.LYReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,6 +346,7 @@
 				CC4A7F391EB3211400C1DF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
